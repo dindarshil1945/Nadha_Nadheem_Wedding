@@ -187,7 +187,7 @@
       }
 
       const timeline = gsap.timeline({
-        defaults: { ease: "power3.inOut" },
+        defaults: { duration: 1.4 , ease: "power3.inOut" },
         onComplete: () => {
           document.body.classList.remove("intro-active");
           document.getElementById("envelopeIntro")?.remove();
@@ -200,16 +200,16 @@
       window.WeddingAudio?.startAfterIntro();
 
       timeline
-        .to(".opening-cover", { scale: 1.018, filter: "brightness(1.04)", duration: 0.82, ease: "power2.inOut" }, 0)
+        .to(".opening-cover", { scale: 1.018, filter: "brightness(1.04)", duration: 1.6, ease: "power2.inOut" }, 0)
         .set("#mainSite", { visibility: "visible" }, 0.12)
-        .to("#mainSite", { opacity: 1, duration: 1.25, ease: "power3.out" }, 0.18)
-        .to("#envelopeIntro", { autoAlpha: 0, duration: 1.08, ease: "power3.inOut" }, 0.28)
+        .to("#mainSite", { opacity: 1, duration: 2, ease: "power3.out" }, 0.18)
+        .to("#envelopeIntro", { autoAlpha: 0, duration: 2, ease: "power3.inOut" }, 0.28)
         .from(".hero-monogram, .hero-eyebrow, .guest-greeting, .hero-names span, .hero-names i, .ornament, .hero-date, .hero-quote, .countdown-mini, .hero-actions, .scroll-cue", {
           y: 28,
           opacity: 0,
           filter: "blur(8px)",
-          duration: 1.05,
-          stagger: 0.075,
+          duration: 1.6,
+          stagger: 0.11,
           ease: "power4.out"
         }, "-=0.45");
     }
