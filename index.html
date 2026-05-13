@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#fffaf2" />
+  <meta name="description" content="A premium cinematic wedding invitation for Nadha and Nadheem." />
+  <title>Nadha & Nadheem | Wedding Invitation</title>
+  <link rel="preload" as="image" href="assets/images/hero-bg.jpg">
+  <link rel="preload" as="audio" href="assets/music/the_mountain-wedding-455512.mp3">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="site-loader" class="site-loader" aria-hidden="true">
+    <span class="loader-mark">N<span>&</span>N</span>
+  </div>
+
+  <section id="envelopeIntro" class="envelope-intro" aria-label="Open invitation">
+    <div id="introParticles" class="intro-particles"></div>
+    <button id="openInvite" class="envelope-button" type="button" aria-label="Open wedding invitation">
+      <span class="envelope">
+        <span class="envelope-back"></span>
+        <span class="letter">
+          <span class="letter-kicker">Wedding Invitation</span>
+          <span class="letter-names" data-couple-short></span>
+          <span class="letter-date" data-wedding-date></span>
+        </span>
+        <span class="envelope-front"></span>
+        <span class="envelope-flap"></span>
+        <span class="wax-seal">N</span>
+      </span>
+      <span class="tap-copy">Tap to open</span>
+    </button>
+  </section>
+
+  <main id="mainSite" class="main-site" aria-live="polite">
+    <section id="home" class="hero section-panel">
+      <div id="heroParticles" class="hero-particles"></div>
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="container hero-content text-center">
+        <div class="hero-monogram" aria-hidden="true">N<span>&</span>N</div>
+        <p class="eyebrow hero-eyebrow" data-welcome-line></p>
+        <p id="guestGreeting" class="guest-greeting"></p>
+        <p id="guestSubGreeting" class="guest-sub-greeting"></p>
+        <h1 class="hero-names">
+          <span data-bride></span>
+          <i>&</i>
+          <span data-groom></span>
+        </h1>
+        <div class="ornament mx-auto"></div>
+        <p class="hero-date"><span data-wedding-date></span> <span class="dot"></span> <span data-wedding-city></span>
+        </p>
+        <p class="hero-quote" data-couple-quote></p>
+
+        <div class="hero-actions">
+          <a href="#rsvp" class="btn btn-gold">RSVP Now</a>
+          <button id="musicToggle" class="btn btn-ghost" type="button">Play Music</button>
+        </div>
+        <a class="scroll-cue" href="#story" aria-label="Scroll to story"><span></span></a>
+      </div>
+    </section>
+
+    <section id="story" class="story section-panel">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-12 col-lg-5" data-aos="fade-up">
+            <figure class="portrait-frame parallax-card">
+              <img id="storyImage" src="" alt="Couple story portrait" loading="lazy">
+            </figure>
+          </div>
+          <div class="col-12 col-lg-7" data-aos="fade-up" data-aos-delay="100">
+            <p class="eyebrow" data-story-subtitle></p>
+            <h2 class="section-title" data-story-title></h2>
+            <div class="section-rule"></div>
+            <div id="storyText" class="story-copy"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="countdown" class="countdown-section section-panel">
+      <div class="container text-center">
+        <p class="eyebrow" data-aos="fade-up">The Big Day</p>
+        <h2 class="section-title text-light" data-aos="fade-up" data-aos-delay="80">Counting The Moments</h2>
+        <div class="section-rule mx-auto light"></div>
+        <div id="countdownGrid" class="countdown-grid" data-aos="fade-up" data-aos-delay="160">
+          <div><strong id="cd-days">00</strong><span>Days</span></div>
+          <div><strong id="cd-hours">00</strong><span>Hours</span></div>
+          <div><strong id="cd-minutes">00</strong><span>Minutes</span></div>
+          <div><strong id="cd-seconds">00</strong><span>Seconds</span></div>
+        </div>
+        <div id="ceremonyReveal" class="ceremony-reveal">
+          <p class="eyebrow">With Love And Blessings</p>
+          <h3>Today, We Begin Forever</h3>
+          <div class="section-rule mx-auto light"></div>
+          <p><span data-wedding-date></span> at <span data-wedding-time></span></p>
+          <span>May this day be filled with love, mercy, and the warmth of everyone who made the journey with us.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="events section-panel">
+      <div class="container text-center">
+        <p class="eyebrow" data-aos="fade-up">Wedding Celebrations</p>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Events</h2>
+        <div class="section-rule mx-auto"></div>
+        <div id="eventsGrid" class="row g-4 justify-content-center"></div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery section-panel">
+      <div class="container text-center">
+        <p class="eyebrow" data-aos="fade-up">Captured Moments</p>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Gallery</h2>
+        <div class="section-rule mx-auto"></div>
+        <div id="galleryGrid" class="gallery-grid"></div>
+      </div>
+    </section>
+
+    <section id="rsvp" class="rsvp section-panel">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-12 col-lg-5" data-aos="fade-up">
+            <div class="rsvp-copy">
+              <p class="eyebrow">Be Our Guest</p>
+              <h2 class="section-title">RSVP</h2>
+              <div class="section-rule"></div>
+              <p>Please confirm your presence and share any details that will help us welcome you beautifully.</p>
+              <span class="rsvp-note">Your response will be recorded privately for the families.</span>
+            </div>
+          </div>
+          <div class="col-12 col-lg-7" data-aos="fade-up" data-aos-delay="100">
+
+            <form id="rsvpForm" class="glass-form">
+
+              <div class="row g-3">
+
+
+                <div class="col-12 col-md-6">
+                  <label for="name">Guest name</label>
+                  <input id="name" name="guestName" type="text" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="phone">Phone number</label>
+                  <input id="phone" name="phone" type="tel" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="side">Bride / Groom side</label>
+                  <select id="side" name="side" required>
+                    <option value="">Select side</option>
+                    <option>Bride side</option>
+                    <option>Groom side</option>
+                    <option>Both families</option>
+                  </select>
+                </div>
+
+                <div class="col-6 col-md-3">
+                  <label for="guests">Accompanying You</label>
+                  <input id="guests" name="adults" type="number" min="0" value="0">
+                </div>
+
+                <div class="col-6 col-md-3">
+                  <label for="children">Children</label>
+                  <input id="children" name="children" type="number" min="0" value="0">
+                </div>
+
+                <div class="col-12">
+                  <label for="message">Custom message</label>
+                  <textarea id="message" name="message" rows="4" placeholder="Leave a blessing or note"></textarea>
+                </div>
+
+              </div>
+
+              <button class="btn btn-gold w-100 mt-4" type="submit">
+                Send RSVP
+              </button>
+
+              <p id="rsvpStatus" class="form-status" role="status"></p>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="wishes" class="wishes section-panel">
+      <div class="container">
+        <div class="text-center">
+          <p class="eyebrow" data-aos="fade-up">Blessings</p>
+          <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Wedding Wishes Wall</h2>
+          <div class="section-rule mx-auto"></div>
+        </div>
+        <form id="wishForm" class="wish-form" data-aos="fade-up">
+          <input id="wishName" type="text" placeholder="Your name" required>
+          <textarea id="wishText" rows="3" placeholder="Write your wish" required></textarea>
+          <button class="btn btn-gold" type="submit">Post Wish</button>
+          <p id="wishStatus" class="form-status" role="status"></p>
+        </form>
+        <div id="wishesWall" class="wishes-wall"></div>
+      </div>
+    </section>
+
+    <section id="families" class="families section-panel">
+      <div class="container text-center">
+        <p class="eyebrow" data-aos="fade-up">With Love From</p>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Our Families</h2>
+        <div class="section-rule mx-auto"></div>
+        <div id="familiesGrid" class="families-grid"></div>
+        <blockquote id="familyBlessing" class="family-blessing"></blockquote>
+      </div>
+    </section>
+
+    <footer class="closing">
+      <div class="container text-center">
+        <h2>Thank You</h2>
+        <p>We are truly grateful for your love, blessings, and presence as we begin this beautiful new chapter.</p>
+        <div class="closing-signature">With love, <strong data-couple-short></strong></div>
+        <div class="site-credit">
+          <span>Designed & Crafted by</span>
+          <strong data-credit-name></strong>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image preview">
+    <button id="lightboxClose" type="button" aria-label="Close image preview">x</button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <nav class="mobile-actions" aria-label="Quick actions">
+    <a href="#events">Events</a>
+    <a href="#rsvp">RSVP</a>
+    <a href="#gallery">Gallery</a>
+  </nav>
+
+  <audio id="weddingMusic" preload="none" loop></audio>
+  <button id="floatingMusicToggle" class="floating-music" type="button" aria-label="Toggle wedding music" aria-pressed="false">
+    <span></span>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/rsvp.js"></script>
+  <script src="js/wishes.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
