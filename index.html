@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#fffaf2" />
   <meta name="description" content="A premium cinematic wedding invitation for Nadha and Nadheem." />
   <title>Nadha & Nadheem | Wedding Invitation</title>
+  <link rel="preload" as="image" href="assets/images/opening.png">
   <link rel="preload" as="image" href="assets/images/hero-bg.jpg">
   <link rel="preload" as="audio" href="assets/music/the_mountain-wedding-455512.mp3">
 
@@ -26,20 +27,8 @@
   </div>
 
   <section id="envelopeIntro" class="envelope-intro" aria-label="Open invitation">
-    <div id="introParticles" class="intro-particles"></div>
-    <button id="openInvite" class="envelope-button" type="button" aria-label="Open wedding invitation">
-      <span class="envelope">
-        <span class="envelope-back"></span>
-        <span class="letter">
-          <span class="letter-kicker">Wedding Invitation</span>
-          <span class="letter-names" data-couple-short></span>
-          <span class="letter-date" data-wedding-date></span>
-        </span>
-        <span class="envelope-front"></span>
-        <span class="envelope-flap"></span>
-        <span class="wax-seal">N</span>
-      </span>
-      <span class="tap-copy">Tap to open</span>
+    <button id="openInvite" class="opening-cover" type="button" aria-label="Open wedding invitation">
+      <img src="assets/images/opening.png" alt="Nadha and Nadheem wedding invitation envelope opening">
     </button>
   </section>
 
@@ -244,7 +233,8 @@
 
   <nav class="mobile-actions" aria-label="Quick actions">
     <a href="#events">Events</a>
-    <a href="#rsvp">RSVP</a>
+    <!-- <a href="#rsvp"></a> -->
+    <a href="#wishes">Wishes</a>
     <a href="#gallery">Gallery</a>
   </nav>
 

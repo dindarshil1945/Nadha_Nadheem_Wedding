@@ -107,157 +107,58 @@ a {
   display: grid;
   place-items: center;
   overflow: hidden;
-  padding: clamp(18px, 6vw, 36px);
-  background:
-    radial-gradient(circle at 50% 54%, rgba(255, 250, 242, 0.44), transparent 24%),
-    radial-gradient(circle at 50% 18%, rgba(255, 250, 242, 0.82), transparent 28%),
-    radial-gradient(circle at 50% 68%, rgba(176, 141, 87, 0.22), transparent 34%),
-    linear-gradient(145deg, #fffaf2 0%, #f2e5ce 48%, #dbc084 100%);
+  background: #2f1d19;
+  transform-origin: center;
 }
 
 .envelope-intro::before {
   content: "";
   position: absolute;
-  left: 50%;
-  top: 50%;
-  width: min(82vw, 460px);
-  aspect-ratio: 1;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(216, 185, 120, 0.22), transparent 64%);
-  filter: blur(18px);
-  animation: envelopeGlow 8s ease-in-out infinite;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(47, 29, 25, 0.34), transparent 18%, transparent 82%, rgba(47, 29, 25, 0.34)),
+    linear-gradient(180deg, rgba(47, 29, 25, 0.18), transparent 18%, transparent 82%, rgba(47, 29, 25, 0.18));
   pointer-events: none;
 }
 
-@keyframes envelopeGlow {
-  0%,
-  100% {
-    opacity: 0.55;
-    transform: translate(-50%, -50%) scale(0.96);
-  }
-  50% {
-    opacity: 0.82;
-    transform: translate(-50%, -50%) scale(1.05);
-  }
-}
-
-.intro-particles,
 .hero-particles {
   position: absolute;
   inset: 0;
   pointer-events: none;
 }
 
-.envelope-button {
+.opening-cover {
   appearance: none;
   border: 0;
-  background: transparent;
-  display: grid;
-  gap: 18px;
-  justify-items: center;
-  width: min(92vw, 430px);
-  max-width: 100%;
-  cursor: pointer;
-  color: var(--ink);
-}
-
-.envelope {
   position: relative;
-  width: min(82vw, 390px);
-  max-width: 100%;
-  aspect-ratio: 1.5;
-  overflow: visible;
-  perspective: 900px;
-  filter: drop-shadow(0 34px 48px rgba(68, 48, 24, 0.28));
-}
-
-.envelope-back,
-.envelope-front,
-.envelope-flap,
-.letter {
-  position: absolute;
-  inset: 0;
-  border-radius: 10px;
-}
-
-.envelope-back {
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent 38%),
-    linear-gradient(145deg, #d0a85f, #f6dfaa 52%, #b9853b);
-  border: 1px solid rgba(255, 250, 242, 0.34);
-  box-shadow: inset 0 0 34px rgba(111, 73, 28, 0.16);
-}
-
-.envelope-front {
-  clip-path: polygon(0 34%, 50% 70%, 100% 34%, 100% 100%, 0 100%);
-  background:
-    linear-gradient(32deg, #c09449 0 50%, transparent 50%),
-    linear-gradient(-32deg, #e0bd70 0 50%, transparent 50%),
-    linear-gradient(180deg, #eccd88, #ad7b35);
-  z-index: 4;
-  box-shadow: inset 0 -22px 38px rgba(91, 56, 18, 0.18);
-}
-
-.envelope-flap {
-  clip-path: polygon(0 0, 100% 0, 50% 68%);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.42), transparent 40%),
-    linear-gradient(160deg, #f8e4aa, #bd8840);
-  transform-origin: top;
-  z-index: 5;
-  box-shadow: inset 0 1px 0 rgba(255, 250, 242, 0.72);
-}
-
-.letter {
-  inset: 12% 8% auto;
-  height: 64%;
-  z-index: 3;
+  z-index: 0;
+  width: 100vw;
+  height: 100svh;
   display: grid;
-  place-content: center;
-  gap: 8px;
-  min-height: 0;
+  place-items: center;
   overflow: hidden;
-  padding: clamp(16px, 4.8vw, 28px);
-  background:
-    radial-gradient(circle at 50% 10%, rgba(216, 185, 120, 0.16), transparent 28%),
-    linear-gradient(180deg, #fffdf8, #f2e6cf);
-  border: 1px solid rgba(176, 141, 87, 0.28);
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.78),
-    0 20px 32px rgba(72, 45, 16, 0.12);
-  text-align: center;
-  transform: translateY(34%);
+  padding: 0;
+  background: #f3e5d2;
+  cursor: pointer;
+  isolation: isolate;
+  touch-action: manipulation;
 }
 
-.letter::before {
-  content: "";
-  position: absolute;
-  inset: 12px;
-  border: 1px solid rgba(176, 141, 87, 0.18);
-  pointer-events: none;
+.opening-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .letter-kicker,
-.tap-copy,
 .eyebrow {
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold-dark);
-}
-
-.tap-copy {
-  min-height: 42px;
-  display: inline-grid;
-  place-items: center;
-  padding: 0 22px;
-  border: 1px solid rgba(176, 141, 87, 0.26);
-  border-radius: 999px;
-  background: rgba(255, 250, 242, 0.62);
-  box-shadow: 0 18px 42px rgba(80, 54, 28, 0.14);
-  backdrop-filter: blur(14px);
 }
 
 .letter-names,
@@ -276,24 +177,6 @@ a {
 .letter-date {
   font-size: clamp(0.78rem, 2.6vw, 1rem);
   color: var(--muted);
-}
-
-.wax-seal {
-  position: absolute;
-  left: 50%;
-  top: 52%;
-  z-index: 6;
-  display: grid;
-  place-items: center;
-  width: clamp(50px, 14vw, 62px);
-  height: clamp(50px, 14vw, 62px);
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #d9ba78, #8e6532);
-  color: #fff8e8;
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.55rem, 6vw, 2.1rem);
-  box-shadow: 0 10px 24px rgba(64, 34, 13, 0.28);
 }
 
 .main-site {
@@ -884,7 +767,7 @@ a {
 .ceremony-reveal span {
   display: block;
   max-width: 520px;
-  margin: 18px auto 0;
+  margin: 0 auto 0;
   color: rgba(255, 250, 242, 0.72);
   font-family: "Cormorant Garamond", serif;
   font-size: 1.22rem;
@@ -1421,14 +1304,6 @@ textarea:focus {
     max-width: 100%;
     padding-inline: 1rem;
     letter-spacing: 0.1em;
-  }
-
-  .envelope-button {
-    gap: 14px;
-  }
-
-  .envelope {
-    width: min(82vw, 350px);
   }
 
   .rsvp-copy,

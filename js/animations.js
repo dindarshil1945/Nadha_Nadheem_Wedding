@@ -57,7 +57,9 @@
     };
 
     tsParticles.load("heroParticles", heroParticleOptions);
-    tsParticles.load("introParticles", introParticleOptions);
+    if (document.getElementById("introParticles")) {
+      tsParticles.load("introParticles", introParticleOptions);
+    }
   }
 
   function initSmoothScroll() {
@@ -108,8 +110,7 @@
         onComplete: () => document.querySelector(".site-loader")?.remove()
       });
 
-      gsap.from(".envelope", { y: 24, opacity: 0, duration: 1.45, ease: "power4.out" });
-      gsap.from(".tap-copy", { opacity: 0, y: 12, duration: 1.1, delay: 0.55, ease: "power4.out" });
+      gsap.from(".opening-cover", { y: 18, opacity: 0, duration: 1.1, ease: "power4.out" });
 
       gsap.utils.toArray(".parallax-card").forEach((card) => {
         gsap.to(card, {
@@ -199,17 +200,10 @@
       window.WeddingAudio?.startAfterIntro();
 
       timeline
-        .set(".envelope", { overflow: "visible" })
-        .to(".wax-seal", { scale: 0, opacity: 0, duration: 0.48, ease: "back.in(1.4)" })
-        .to(".envelope-flap", { rotateX: -182, duration: 1.18, ease: "power4.inOut" }, "+=0.08")
-        .set(".envelope-flap", { zIndex: 1 })
-        .set(".letter", { zIndex: 8 })
-        .to(".envelope-front", { y: 10, duration: 0.78, ease: "power3.inOut" }, "+=0.06")
-        .to(".letter", { y: -162, scale: 1.045, duration: 1.25, ease: "expo.out" }, "-=0.38")
-        .to(".envelope", { y: 86, scale: 0.94, opacity: 0, duration: 0.95, ease: "power4.inOut" }, "+=0.16")
-        .to("#envelopeIntro", { autoAlpha: 0, duration: 1.05, ease: "power3.inOut" }, "-=0.32")
-        .set("#mainSite", { visibility: "visible" }, "-=0.72")
-        .to("#mainSite", { opacity: 1, duration: 1.35, ease: "power3.out" }, "-=0.62")
+        .to(".opening-cover", { scale: 1.018, filter: "brightness(1.04)", duration: 0.82, ease: "power2.inOut" }, 0)
+        .set("#mainSite", { visibility: "visible" }, 0.12)
+        .to("#mainSite", { opacity: 1, duration: 1.25, ease: "power3.out" }, 0.18)
+        .to("#envelopeIntro", { autoAlpha: 0, duration: 1.08, ease: "power3.inOut" }, 0.28)
         .from(".hero-monogram, .hero-eyebrow, .guest-greeting, .hero-names span, .hero-names i, .ornament, .hero-date, .hero-quote, .countdown-mini, .hero-actions, .scroll-cue", {
           y: 28,
           opacity: 0,

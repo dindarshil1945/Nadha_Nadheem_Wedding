@@ -15,7 +15,7 @@ window.WEDDING_CONFIG = {
     ]
   },
   wedding: {
-    dateISO: "2026-05-13T12:48:00+05:30",
+    dateISO: "2026-05-13T15:17:00+05:30",
     displayDate: "25 December 2026",
     displayTime: "5:00 PM",
     city: "Kozhikode, Kerala"
