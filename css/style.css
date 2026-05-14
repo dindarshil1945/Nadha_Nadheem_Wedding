@@ -678,7 +678,8 @@ a {
 
 .portrait-frame {
   position: relative;
-  margin: 0;
+  margin: 0 auto;
+  margin-left: 40px;
   padding: 12px;
   background: #f1dfbd;
   box-shadow: var(--shadow);
@@ -687,7 +688,7 @@ a {
 .portrait-frame::before {
   content: "";
   position: absolute;
-  inset: -10px 18px 18px -10px;
+  inset: -10px -10px -10px -10px;
   z-index: -1;
   border: 1px solid rgba(176, 141, 87, 0.34);
 }
@@ -696,7 +697,8 @@ a {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center;
+  /* object-position: center top; */
+  /* margin-left: 40px; */
 }
 
 .story-copy {
@@ -784,6 +786,7 @@ a {
   overflow: hidden;
   border-radius: 8px;
   text-align: left;
+  margin-left: 24px;
 }
 
 .event-card iframe {
@@ -1361,3 +1364,4 @@ textarea:focus {
     animation: none !important;
   }
 }
+
