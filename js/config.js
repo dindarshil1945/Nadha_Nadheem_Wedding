@@ -85,5 +85,10 @@ window.WEDDING_CONFIG = {
     champagne: "#d5ad62",
     gold: "#a87939",
     ink: "#2a201d"
+    // ivory: "#fbf3e7",
+    // beige: "#e7d2ad",
+    // champagne: "#d5ad62",
+    // gold: "#a87939",
+    // ink: "#2a201d"
   }
 };
